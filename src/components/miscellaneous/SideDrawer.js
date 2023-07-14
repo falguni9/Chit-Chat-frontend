@@ -163,6 +163,9 @@ function SideDrawer() {
           </Tooltip>
           <Menu>
             <MenuButton p={1}>
+              {notification.length > 0
+                ? (document.title = `you have new massage${notification.length}`)
+                : (document.title = `Chit-Chat`)}
               <NotificationBadge
                 count={notification.length}
                 effect={Effect.SCALE}
