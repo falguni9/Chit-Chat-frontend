@@ -57,7 +57,11 @@ function SideDrawer() {
     // history.push("/");
     navigate("/");
   };
-
+ 
+   notification.length > 0
+     ? (document.title = `you have new massage: ${notification.length}`)
+     : (document.title = `Chit-Chat`);
+ 
   const handleSearch = async () => {
     if (!search) {
       toast({
@@ -163,9 +167,7 @@ function SideDrawer() {
           </Tooltip>
           <Menu>
             <MenuButton p={1}>
-              {notification.length > 0
-                ? (document.title = `you have new massage${notification.length}`)
-                : (document.title = `Chit-Chat`)}
+             
               <NotificationBadge
                 count={notification.length}
                 effect={Effect.SCALE}
