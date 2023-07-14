@@ -52,7 +52,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://chitchat-4e9u.onrender.com/api/user",
         {
           name,
           email,

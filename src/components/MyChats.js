@@ -25,7 +25,10 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(
+        "https://chitchat-4e9u.onrender.com/api/chat",
+        config
+      );
       setChats(data);
     } catch (error) {
       toast({

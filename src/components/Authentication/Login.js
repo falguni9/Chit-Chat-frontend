@@ -40,7 +40,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://chitchat-4e9u.onrender.com/api/user/login",
         { email, password },
         config
       );
